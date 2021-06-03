@@ -1,8 +1,8 @@
-let alea = Math.floor(Math.random()* 100)
-let aleat = Number(alea.value)
+let alea = Math.floor(Math.random()* 100);
+let aleat = Number(alea.value);
 
-let reiniciar = document.querySelector('input#reiniciar') 
-reiniciar.style.display = "none"
+let reiniciar = document.getElementById('reiniciar');
+reiniciar.style.display = "none";
 
 function selecionar() {
     let num = document.getElementById('num');
@@ -11,7 +11,7 @@ function selecionar() {
     if (num.value.length == 0) {
         alert('[ERRO] Esolha um número');
     } else if (alea < Number(num.value)) {
-        res.innerHTML = "Escolha um maior menor";
+        res.innerHTML = "Escolha um número menor";
         num.focus();
     } else if (alea > Number(num.value)) {
         res.innerHTML = "Escolha um número maior";
@@ -21,12 +21,11 @@ function selecionar() {
         let parabens = document.getElementById('parabens');
         select.innerHTML= '';
         parabens.innerHTML = "Parabéns";
-        res.innerHTML = `Você acerto. O número sorteado foi ${alea}`;
+        res.innerHTML = `Você acertou. O número sorteado foi ${alea}`;
 
-        reiniciar.style.display = "inline";
-        
-    }
-}
+        reiniciar.style.display = "";
         function reiniciar() {
             location.reload();
         }
+    }
+}
