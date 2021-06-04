@@ -1,0 +1,24 @@
+body{
+    background: blueviolet;
+}
+section {
+    background: whitesmoke;
+    border-radius: 37px;
+    padding: 15px;
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.900);
+}
+
+span {
+    font: normal 100px arial;
+    }
+
+input,botão {
+    font: normal 20px arial;
+} 
+
+p#res {
+    font-size: 20px;
+}
