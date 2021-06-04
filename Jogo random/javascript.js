@@ -18,5 +18,18 @@ function selecionar() {
         select.innerHTML= '';
         parabens.innerHTML = "Parabéns";
         res.innerHTML = `Você acertou. O número sorteado foi ${alea}`;
+        document.getElementById('reiniciar').style.visibility = "";
+    }
+}
+
+function reiniciar() {
+    location.reload()
+}
+
+function confereEnter(evnt)
+{
+    if(evnt.key = "Enter" || evnt.keyCode === 13)
+    {
+        selecionar();
     }
 }
