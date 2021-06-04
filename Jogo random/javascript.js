@@ -1,8 +1,4 @@
 let alea = Math.floor(Math.random()* 100);
-let aleat = Number(alea.value);
-
-let reiniciar = document.getElementById('reiniciar');
-reiniciar.style.display = "none";
 
 function selecionar() {
     let num = document.getElementById('num');
@@ -22,10 +18,5 @@ function selecionar() {
         select.innerHTML= '';
         parabens.innerHTML = "Parabéns";
         res.innerHTML = `Você acertou. O número sorteado foi ${alea}`;
-
-        reiniciar.style.display = "";
-        function reiniciar() {
-            location.reload();
-        }
     }
 }

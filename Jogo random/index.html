@@ -7,7 +7,7 @@
     <title>Jogo random</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="load()">
     <h1 id="parabens">Boa sorte!</h1>
     <section>
         <div id="select">
@@ -19,9 +19,10 @@
             Olá, tenta descubrir qual número eu sorteei
         </div>
         <div>
-            <input id="reiniciar" type="button" value="Reiniciar" onclick="reiniciar()">
+            <input type="button" id="reiniciar" value="Reiniciar" onclick="reiniciar()">
         </div>
     </section>
     <script src="javascript.js"></script>
+    <script src="load.js"></script>
 </body>
 </html>
