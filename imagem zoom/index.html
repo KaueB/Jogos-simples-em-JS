@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem</title>
+    <style>
+        div.imgem {
+            padding-top: 3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class='imgem'><img src="perfilTT.jpg" alt="imagem" id="img" onmousemove="ampliar()"></div>
+    <h1 id="teste">teste</h1>
+    <h1 id="teste2">teste</h1>
+    
+    <script>
+        function ampliar() {
+            document.getElementById('teste').innerHTML = 'oi';
+            document.getElementById('img').style.backgroundSize = '400px, 400px';
+            /* img.style.backgroundSize = '20rem, 20rem'; */
+        }
+        window.onload = function() {
+            document.getElementById('img').style.backgroundSize = '400px, 400px';
+            document.getElementById('teste2').innerHTML = 'teste confirmado';
+        }
+    </script>
+</body>
+</html>
