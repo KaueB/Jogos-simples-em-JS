@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <title>Jogo random 2</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body onload="load()">
     <div>
         <h1>Joguinho random 2</h1>
@@ -15,11 +17,14 @@
     </div>
     <div>
         <h3 id="resultado">???</h3>
-        <input type="button" value="???" id="botao1" onclick="botao1()">
-        <input type="button" value="???" id="botao2" onclick="botao2()">
-        <input type="button" value="???" id="botao3" onclick="botao3()">
-        <input type="button" value="???" id="botao4" onclick="botao4()">
+        <input type="button" value="?" id="botao1" onclick="botao(this.value)">
+        <input type="button" value="?" id="botao2" onclick="botao(this.value)">
+        <input type="button" value="?" id="botao3" onclick="botao(this.value)">
+        <input type="button" value="?" id="botao4" onclick="botao(this.value)">
+
+        <input type="button" value="Reiniciar" id="reiniciar" style="display: none" onclick="reiniciar()">
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,69 +1,51 @@
-let resultadoNum = Math.floor(Math.random() * (50 - 100));
-let resultadoB1 = Math.floor(Math.random() * 50);
-let resultadoB2 = Math.floor(Math.random() * 50);
-let resultadoB3 = Math.floor(Math.random() * 50);
-let resultadoB4 = Math.floor(Math.random() * 50);
-resultadoB1 = Number(value.resultadoB1);
-resultadoB2 = Number(value.resultadoB2);
-resultadoB3 = Number(value.resultadoB3);
-resultadoB4 = Number(value.resultadoB4);
+function load() {
+    const min = -50;
+    const max = 50;
+    const resultadoNum = Math.floor(Math.random() * (max - min + 1)) + min;
 
-function load() {    
-    resultado = document.getElementById('resultado');
+    const resultado = document.getElementById('resultado');
     resultado.innerHTML = resultadoNum;
-    document.getElementById('botao1').value = resultadoB1;
-    document.getElementById('botao2').value = resultadoB2;
-    document.getElementById('botao3').value = resultadoB3;
-    document.getElementById('botao4').value = resultadoB4
+
+    resultadoNum === 0 ? parabens() : undefined
+
+    handleButton();
 }
 
-function botao1() {
-    resultadoNum = resultadoNum + resultadoB3
-    resultado.innerHTML = resultadoNum;
-    resultadoB1 = (Math.floor(Math.random()(+50 -50)));
-    document.getElementById('botao1').value = resultadoB1
-    resultadoB2 = Math.floor(Math.random() * 50);
-    document.getElementById('botao2').value = resultadoB2
-    resultadoB3 = Math.floor(Math.random() * 50);
-    document.getElementById('botao3').value = resultadoB3
-    resultadoB4 = Math.floor(Math.random() * 50);
-    document.getElementById('botao4').value = resultadoB4
+function handleButton() {
+    for (let e = 1; e <= 4; e++) {
+        document.getElementById(`botao${e}`).value = Math.floor(Math.random() * 50);
+    }
 }
 
-function botao2() {
-    resultadoNum = resultadoNum + resultadoB3
-    resultado.innerHTML = resultadoNum
-    resultadoB1 = Math.floor(Math.random() * 50);
-    document.getElementById('botao1').value = resultadoB1
-    resultadoB2 = Math.floor(Math.random() * 50);
-    document.getElementById('botao2').value = resultadoB2
-    resultadoB3 = Math.floor(Math.random() * 50);
-    document.getElementById('botao3').value = resultadoB3
-    resultadoB4 = Math.floor(Math.random() * 50);
-    document.getElementById('botao4').value = resultadoB4
-} 
-function botao3() {
-    resultadoNum = resultadoNum + resultadoB3
-    resultado.innerHTML = resultadoNum
-    resultadoB1 = Math.floor(Math.random() * 50);
-    document.getElementById('botao1').value = resultadoB1
-    resultadoB2 = Math.floor(Math.random() * 50);
-    document.getElementById('botao2').value = resultadoB2
-    resultadoB3 = Math.floor(Math.random() * 50);
-    document.getElementById('botao3').value = resultadoB3
-    resultadoB4 = Math.floor(Math.random() * 50);
-    document.getElementById('botao4').value = resultadoB4
+function parabens() {
+    for (let e = 1; e <= 4; e++) {
+        document.getElementById(`botao${e}`).style.display = 'none'
+    }
+
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = "Parabéns"
+
+    document.getElementById('reiniciar').style.display = 'block'
+
+    return
 }
 
-function botao4() {
-    resultadoNum = resultadoNum + resultadoB3
-    resultado.innerHTML = resultadoNum
-    resultadoB1 = Math.floor(Math.random() * 50);
-    document.getElementById('botao1').value = resultadoB1
-    resultadoB2 = Math.floor(Math.random() * 50);
-    document.getElementById('botao2').value = resultadoB2
-    resultadoB3 = Math.floor(Math.random() * 50);
-    document.getElementById('botao3').value = resultadoB3
-    resultadoB4 = Math.floor(Math.random() * 50);
-    document.getElementById('botao4').value = resultadoB4
+function botao(value) {
+    let resultado = document.getElementById('resultado');
+    let resultadoNumero = Number(resultado.innerHTML);
+    let valorNumero = Number(value);
+
+    if (resultadoNumero > 0) {
+        resultado.innerHTML = resultadoNumero - valorNumero;
+    } else {
+        resultado.innerHTML = resultadoNumero + valorNumero;
+    };
+
+    Number(document.getElementById('resultado').innerHTML) === 0 ? parabens() : undefined
+
+    handleButton();
+}
+
+function reiniciar() {
+    window.location.reload();
 }
