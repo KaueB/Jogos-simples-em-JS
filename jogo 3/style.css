@@ -1,3 +1,43 @@
 body {
-    background-color: rgb(160, 93, 73);
+  background-color: rgb(160, 93, 73);
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: rgb(107, 28, 4);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+input[type="button"] {
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(200, 100, 50);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="button"]:hover {
+  background-color: rgb(220, 120, 70);
 }

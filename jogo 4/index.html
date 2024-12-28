@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu terceiro jogo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1>Create folders</h1>
+      </div>
+      <p id="res">Escolha um numero</p>
+    </header>
+    <main>
+      <form id="folderForm" class="form-container">
+        <input
+          type="text"
+          name="folder"
+          id="folder"
+          placeholder="Digite o nome da pasta"
+          required
+        />
+        <input type="submit" value="Criar" />
+      </form>
+      <div class="pasta">
+        <h2 id="pasta">Pasta: </h2>
+        <button id="voltar" onclick="voltar()">Voltar</button>
+      </div>
+    </main>
+    <div id="caixa" class="caixa"></div>
+    <div id="confirm" class="confirm"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
